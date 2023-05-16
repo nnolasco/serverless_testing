@@ -2,6 +2,8 @@
 
 This Python code provides a Command Line Interface (CLI) guidance using Inquirer to easily select functions and payloads for serverless testing on AWS Lambda.
 
+![Screenshot of utility in action](https://www.scrmble.com/static/img/screenshots/screenshot01.png)
+
 ## Setup Instructions
 
 1. Create a virtual environment:
