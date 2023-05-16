@@ -1,0 +1,6 @@
+{
+  "users": [
+    "system/users/testpayloads/hello.json",
+    "system/users/testpayloads/getUsers.json"
+  ]
+}

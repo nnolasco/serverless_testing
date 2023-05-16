@@ -1,0 +1,28 @@
+# For full config options, check the docs:
+#    docs.serverless.com
+
+service: your-service-name
+# app and org for use with dashboard.serverless.com
+#app: your-app-name
+#org: your-org-name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: "us-east-1"
+  environment:
+    DYNAMO_TABLE_NAME: ${ssm:DYNAMO_TABLE_NAME}
+    USER_POOL_ID: ${ssm:COGNITO_USER_POOL_ID}
+    OUTGOING_EMAIL: ${ssm:OUTGOING_EMAIL}
+    S3_UPLOAD_BUCKET: ${ssm:S3_UPLOAD_BUCKET}
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-offline
+functions:
+  users:
+    handler: system/users/index.handler

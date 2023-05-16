@@ -1,0 +1,8 @@
+{
+  "arguments": {
+    "key1": "test",
+    "key2": "test2"
+  },
+  "type": "Query",
+  "field": "hello"
+}
